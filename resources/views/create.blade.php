@@ -25,6 +25,11 @@
                     <form method="POST" action="{{ route('salvarIMC') }}">
                         @csrf
                             <div class="form-group">
+                                <label for="exampleInputEmail1">Nome</label>
+                                <input type="text" name="nome" class="form-control" id="exampleInputEmail1">                            
+                            </div>
+
+                            <div class="form-group">
                                 <label for="exampleInputEmail1">Peso</label>
                                 <input type="text" name="peso" class="form-control" id="exampleInputEmail1">                            
                             </div>

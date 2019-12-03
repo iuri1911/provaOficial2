@@ -35,7 +35,6 @@ class IMCController extends Controller
         $imc->resultado = $request->resultado;
 
 
-        $nomec = $request->nome;
         $pesoc = $request->peso;
         $alturac = $request->altura;
 
@@ -43,6 +42,7 @@ class IMCController extends Controller
         $imc->resultado = round($massa);
 
         if ($massa < 20) {
+        return redirect()->route('listarIMC');
             $imc->diagnostico ="magro";
             } elseif(($massa > 20) and ($massa <25)) {
             $imc->diagnostico = "normal";
